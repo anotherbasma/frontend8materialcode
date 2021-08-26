@@ -1,0 +1,65 @@
+
+<html>
+    <head>
+        <title>homepage</title>
+
+    </head>
+    <body>
+
+        <h2>form</h2>
+        <form action="signin.php" method="get">
+            <fieldset>
+                <legend>personal data</legend>
+            <label for="username">username</label>
+            <input type="text" placeholder="Enter text" id="username" name="username"><br>
+
+
+            <label for="password">password</label>
+            <input type="password" placeholder="Enter password" id="password" name="password"><br>
+            </fieldset>
+            
+            
+            <label>gender</label>
+            <input type="radio" name="gender" value="male">male
+            <input type="radio" name="gender" value="female">female<br>
+
+
+            <label>hobby</label>
+            <input type="checkbox" name="hobby" value="drawing">drawing
+            <input type="checkbox" name="hobby" value="swimming">swimming
+            <input type="checkbox" name="hobby" value="reading">reading
+            <br>
+
+            <label>comment</label><br>
+            <textarea cols="40" rows="5"> 
+                type text here
+            </textarea>
+            <br>
+
+
+            <label>faculty</label>
+            <select name="faculty">
+                <optgroup label="mathematics">
+                    <option>commerce</option>
+                    <option>computer science</option>
+                    <option>engineering</option>
+                </optgroup>
+                <optgroup label="science">
+                    <option>medicine</option>
+                    <option>science</option>
+                    <option>pharmacy</option>
+                </optgroup>
+              </select>
+
+
+            <br>
+
+            <input type="submit" value="sign in">
+            <input type="button" value="sign in">
+            <button>sign in</button>
+        </form>
+
+
+    </body>
+
+</html>
