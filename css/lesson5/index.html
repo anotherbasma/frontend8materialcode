@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            font-size: 16px;
+            --color1:#d1d1d1;
+            
+        }
+        main{
+            background-color: aqua;
+            padding: 20px;
+            height: 300px;
+            background-image: url('imgs/partha-narasimhan-EHs_-3H41YM-unsplash.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+
+        }
+        section{
+            padding-bottom: 350px;
+            background-color: var(--color1);
+        }
+        input{
+            background-image: url('imgs/search.png');
+            background-size: 17px 17px;
+            background-repeat: no-repeat;
+            background-position: 2px 2px;
+            padding-left: 25px;
+        }
+        h1{
+            text-shadow: 5px 0 3px #FF0000,0 5px 3px #221b7e;;
+        }
+        #parent{
+
+        }
+        .child{
+           margin: 10px;
+            
+            width: calc(25% - 24px);
+            float: left;
+            border: 2px solid black;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        
+        <input type="text" placeholder="Enter username">
+        <h1>Text shadow effect!</h1>
+
+    </section>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ad provident exercitationem nemo deleniti iure, expedita sapiente ex laudantium quod laboriosam quaerat corrupti sequi maiores. Amet aperiam eligendi omnis eaque!</p>
+    </main>
+    <section>g</section>
+
+    <div id="parent">
+        <div class="child">
+            <img src="imgs/partha-narasimhan-EHs_-3H41YM-unsplash.jpg" width="100%">
+        </div>
+        <div class="child">
+            <img src="imgs/partha-narasimhan-EHs_-3H41YM-unsplash.jpg" width="100%">
+        </div>
+        <div class="child">
+            <img src="imgs/partha-narasimhan-EHs_-3H41YM-unsplash.jpg" width="100%">
+        </div>
+        <div class="child">
+            <img src="imgs/partha-narasimhan-EHs_-3H41YM-unsplash.jpg" width="100%">
+        </div>
+    </div>
+    
+    
+</body>
+</html>

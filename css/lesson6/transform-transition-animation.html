@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         .div1{
+             background-color:rebeccapurple;
+             width: 200px;
+             height: 200px;
+            color: white;
+            transform: translate(150px,150px);
+            transform: rotate(45deg);
+            transform: skewY(45deg) ;
+             transform: scale(2,2);
+            /* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+            transform: matrix(1, -0.3, 0, 1, 50, 50);
+            /************************************/
+        
+        }
+        .div2{
+             background-color:teal;
+             width: 100px;
+             
+             overflow: auto;
+             transition: width 2s,height 2s,background 2s;
+            
+        
+        }
+        .div2:hover{
+            width: 400px;
+            height: 300px;
+            background:tomato ;
+        }
+        input{
+            width: 80px;
+            height: 40px;
+            transition: width 2s;
+        }
+        input:focus{
+            width:280px;
+            
+        }
+        .div3{
+             background-color:yellow;
+             width: 100px;
+             height: 70px;
+             position: relative;
+             left: 0;
+             animation-name: animation1;
+             animation-duration: 3s;
+             animation-iteration-count: infinite;
+        
+        }
+        @keyframes animation1{
+            from{
+                left: 0;
+
+
+            }
+            to{
+                left: calc(100% - 100px);
+
+            }
+        }
+     </style>
+ </head>
+ <body>
+    <div class="div3">
+        div
+    </div>
+    <input type="text" placeholder="search here">
+    <div class="div1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe vero nam ab ut praesentium voluptates non molestias veniam veritatis, voluptate eligendi neque deleniti architecto possimus distinctio sequi. Odit, facilis recusandae.
+    </div>
+    <div class="div2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe vero nam ab ut praesentium voluptates non molestias veniam veritatis, voluptate eligendi neque deleniti architecto possimus distinctio sequi. Odit, facilis recusandae.
+    </div>
+  
+   
+  
+ </body>
+ </html>
