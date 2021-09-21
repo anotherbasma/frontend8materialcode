@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <script>
+        var cars=['BMW','MERCEDES','Rover'];
+        cars[2]='FIAT';
+        cars[3]="Rover";
+        cars[5]="Nissan";
+        cars.push('Firary');
+        cars.unshift('lanos');
+        cars.pop();
+
+        cars.splice(5,1,"ford");
+
+
+        document.write(cars[2]);
+        document.write("<br>"+cars);
+        document.write("<br>"+cars.length);
+        
+       for(n=0;n<cars.length;n++)
+       {
+           
+        document.write("<br> car "+(n+1)+" is " + cars[n]);
+       }
+
+
+       var text1=cars.join(' - ');
+       document.write("<br>"+text1);
+
+       var arr1=text1.split(" - ");
+       document.write("<br>"+arr1[0]);
+
+       
+
+    </script>
+
+</body>
+</html>

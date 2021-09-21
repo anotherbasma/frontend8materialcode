@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <table id="table1" border="1px">
+       
+    </table>
+
+
+    <script>
+        var degree=80;
+
+        /*if(degree>=50)
+        {
+            document.getElementById('p1').innerHTML="success";
+        }
+        else{
+            document.getElementById('p1').innerHTML="fail";
+        }
+        */
+
+
+
+        /*
+       if(degree>=85)
+       {
+        document.getElementById('p1').innerHTML="excellent";
+       }
+       else{
+
+        if(degree>=75)
+        {
+            document.getElementById('p1').innerHTML="V Good";
+        }
+        else{
+            if(degree>=65)
+            {
+                document.getElementById('p1').innerHTML="Good";
+            }
+            else{
+                if(degree>=50){
+                    document.getElementById('p1').innerHTML="successed";
+                }
+                else{
+                    document.getElementById('p1').innerHTML="failed";
+                }
+            }
+        }
+       }
+       */
+      if(degree>=85)
+      {
+        document.getElementById('p1').innerHTML="excellent";
+  
+      }
+      else if(degree>=75)
+      {
+        document.getElementById('p1').innerHTML="V Good";
+      }
+      else if(degree>=65)
+      {
+        document.getElementById('p1').innerHTML="Good";
+      }
+      else if(degree>=50)
+      {
+        document.getElementById('p1').innerHTML="successed";
+      }
+      else{
+        document.getElementById('p1').innerHTML="failed";
+      }
+
+
+
+
+      /****************************************/
+      var day=4;
+
+      switch (day)
+      {
+         case 1:
+         document.getElementById('p1').innerHTML="saturday";
+         break;
+
+         case 2:
+         document.getElementById('p1').innerHTML="sunday";
+         break;
+
+         case 3:
+         document.getElementById('p1').innerHTML="monday";
+         break;
+
+         case 4:
+         document.getElementById('p1').innerHTML="tuesday";
+         break;
+
+         case 5:
+         document.getElementById('p1').innerHTML="wednesday";
+         break;
+
+         case 6:
+         document.getElementById('p1').innerHTML="thursday";
+         break;
+
+         case 7:
+         document.getElementById('p1').innerHTML="friday";
+         break;
+
+         default:
+         document.getElementById('p1').innerHTML="Not a day";
+         break;
+
+      }
+
+
+      /*****************************************************************************************************/
+     
+      document.getElementById('table1').innerHTML="<tr><td>numbers</td></tr>";
+      for(var i=0;i<=100;i++)
+      {
+        if(i==50)
+        {
+            continue;
+        }
+
+          document.getElementById('table1').innerHTML+="<tr><td>"+ i +"</td></tr>"
+      }
+
+
+
+      /*for(i=0;i<=100;i++)
+      {
+
+      }
+
+      */
+     var j=0;
+     while(j<=100)
+     {
+        document.getElementById('p1').innerHTML+=j+"<br>";
+        j++;
+     }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #subscribe{
+            
+            height: 100%;
+           width: 100%;
+            background-color: rgba(0,0,0,0.25);
+            position: fixed;
+            top:0;
+            display: none;
+        }
+        #subbody{
+            width: 60%;
+            padding: 40px;
+            background-color: white;
+            margin: auto;
+            margin-top: 200px;
+            position: relative;
+        }
+        #subbody input, #subbody #sub{
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            height: 40px;
+        }
+        #subbody #sub{
+            background-color: red;
+            color: white;
+            border: none;
+            
+        }
+        #subbody #sub:hover{
+            background-color:  rgba(0,0,0,0.25);
+            color: black;
+        }
+        #close{
+            position: absolute;
+            top:40px;
+            right:40px;
+            padding: 10px;
+            font-weight: 900;
+          
+            font-size: x-large;
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <p id="p1"></p>
+    <button onclick="function1()">click to show paragraph </button>
+    <button onclick="subscribe()">Subscribe </button>
+    <div id="subscribe">
+        <div id="subbody" class="wow bounceInUp" data-wow-duration="1s" >
+            <button id="close" onclick="clos()"> X </button>
+            <h2>subscribe</h2>
+            <p>Join my mailing list to receive updates on the latest blog posts and other things.
+
+            </p>
+            <input type="text" placeholder="Enter E-mail">
+            <button id="sub">Subscribe</button>
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+
+    <script>
+
+        
+
+        function function1()
+        {
+
+            document.getElementById('p1').innerHTML="welcome all";
+            document.getElementById('p1').style.border="2px solid gray";
+            document.getElementById('p1').style.backgroundColor="lightgreen";
+
+
+        
+        }
+        function subscribe()
+        {
+
+            document.getElementById('subscribe').style.display="block";
+            
+
+        
+        }
+        function clos()
+        {
+
+            document.getElementById('subscribe').style.display="none";
+            
+
+        
+        }
+
+
+        function addition(x,y)
+        {
+            var z=x+y;
+            return z;
+        }
+
+
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min) ) + min;
+            }
+
+
+        console.log(addition(10,20));
+        
+        console.log(Math.round(Math.random()*10));
+        console.log(getRndInteger(2,8));
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">welcome</p>
+
+    <div class="d1"> welcome </div>
+    <div class="d1"> welcome </div>
+    <div class="d1"> welcome </div>
+
+
+    <img src="1.jpg" id="img1" width="200" height="200" onmouseover="fun1()" onmouseout="fun2()">
+    <input type="text" size="40" onkeydown="myFunction(event)">
+
+    <script>
+    function myFunction(event) {
+    var x = event.which;
+
+    // If the pressed keyboard button is "a" or "A" (using caps lock or shift), alert some text.
+    if(x==13)
+    {
+    
+        alert ("You pressed the  Enter key!");
+        }
+    
+    }
+    </script>
+
+    <script>
+        document.getElementsByClassName('d1')[0].innerHTML="hi";
+
+        var ar1= document.getElementsByClassName('d1');
+        for(i=0;i<ar1.length;i++)
+        {
+            ar1[i].style.color="red";
+        }
+
+
+        function fun1()
+        {
+            document.getElementById('img1').src="2.jpg";
+        }
+        function fun2()
+        {
+            document.getElementById('img1').src="1.jpg";
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
