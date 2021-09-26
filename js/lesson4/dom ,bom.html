@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="animate.css">
+    <style>
+        html,body{
+            height: 100%;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #subscribe{
+            
+            height: 100%;
+           width: 100%;
+            background-color: rgba(0,0,0,0.25);
+            position: fixed;
+            top:0;
+            display: none;
+        }
+        #subbody{
+            width: 60%;
+            padding: 40px;
+            background-color: white;
+            margin: auto;
+            margin-top: 200px;
+            position: relative;
+        }
+        #subbody input, #subbody #sub{
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            height: 40px;
+        }
+        #subbody #sub{
+            background-color: red;
+            color: white;
+            border: none;
+            
+        }
+        #subbody #sub:hover{
+            background-color:  rgba(0,0,0,0.25);
+            color: black;
+        }
+        #close{
+            position: absolute;
+            top:40px;
+            right:40px;
+            padding: 10px;
+            font-weight: 900;
+          
+            font-size: x-large;
+            
+
+        }
+
+    </style>
+    <style>
+        #article{
+            width: 60%;
+            padding: 20px;
+        }
+        #article h2{
+            padding: 10px;
+            text-align: center;
+            color: brown;
+        }
+        #article img{
+            width: 100%;
+        }
+        #article p{
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"></p>
+    <div id="article">
+
+    </div>
+
+    <button onclick="func1()">
+        show article1
+    </button>
+    <button id="but1">
+        show article2
+    </button>
+    <button id="but2">
+        show article2
+    </button>
+
+<button onclick="clearInterval(y)">stop time</button>
+<div id="subscribe">
+    <div id="subbody" class="wow bounceInUp" data-wow-duration="1s" >
+        <button id="close" onclick="clos()"> X </button>
+        <h2>subscribe</h2>
+        <p>Join my mailing list to receive updates on the latest blog posts and other things.
+
+        </p>
+        <input type="text" placeholder="Enter E-mail">
+        <button id="sub">Subscribe</button>
+
+
+
+    </div>
+
+</div>
+
+
+
+<script src="wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+
+       
+    <script>
+       
+        function func1()
+        {
+            document.getElementById('article').innerHTML+=' <h2 class="subject">article subject</h2><img src="2.jpg" ><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor facilis ea quam. Ducimus sequi quos tempore est dolores eveniet deserunt maxime, provident laudantium, ea, accusantium numquam vel itaque excepturi nesciunt?</p>';
+
+        }
+
+
+        document.getElementById('but1').addEventListener('click',func1);
+        document.getElementById('but2').onclick=func1;
+/*
+        if (confirm("Press a button!")) {
+        txt = "You pressed OK!";
+        } else {
+        txt = "You pressed Cancel!";
+        }
+            
+        let person = prompt("Please enter your name", "Harry Potter");
+        let text;
+        if (person == null || person == "") {
+        text = "User cancelled the prompt.";
+        } else {
+        text = "Hello " + person + "! How are you today?";
+        }
+*/
+        var p1=document.getElementById('p1');
+        var d1=new Date();
+        p1.innerHTML="Time now is "+ d1.toLocaleTimeString();
+
+        function timenow()
+        {
+            var d1=new Date();
+            p1.innerHTML="Time now is "+ d1.toLocaleTimeString();
+        }
+        var y=setInterval(timenow,1000);
+        
+        function subsc()
+        {
+            document.getElementById('subscribe').style.display='block';
+        }
+        function clos()
+        {
+            document.getElementById('subscribe').style.display='none';
+        }
+        var z=setTimeout(subsc,5000);
+        clearTimeout(z);
+
+    </script>
+</body>
+</html>
