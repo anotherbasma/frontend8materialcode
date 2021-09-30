@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+          
+            margin: 20px;
+        }
+        #ti{
+            color: slateblue;
+        }
+        #questions{
+            border:2px solid slateblue;
+            padding: 20px;
+            
+        }
+        button{
+            padding: 10px;
+            background-color: slateblue;
+            
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h2> Rondom exam </h2>  
+   <h2 id="ti">Time left = <span id="timer">02:00</span></h2> 
+   
+    <div id="questions">
+ 
+        
+
+    </div>
+    <div id="result">
+
+    </div>
+    <button onclick="result()">submit</button>
+
+
+
+
+    <script>
+          function question(id,qtitle,qopt1,qopt2,qopt3,qanswer)
+    {
+            this.id=id;
+            this.qtitle=qtitle;
+            this.qopt1=qopt1;
+            this.qopt2=qopt2;
+            this.qopt3=qopt3;
+            this.qanswer=qanswer;
+
+    }    
+     var q1=new question(1,'what is HTML?','Cascade style sheet','Cascade css sheet','Hyber Text Markup Language','Hyber Text Markup Language');        
+    
+     var questionsdiv=document.getElementById('questions');
+     questionsdiv.innerHTML+=q1.id+" : "+q1.qtitle;
+     questionsdiv.innerHTML+='<br><input type="radio" value="Cascade style sheet" name="q1" >Cascade style sheet<br><input type="radio" value="Cascade css sheet" name="q1" >Cascade css sheet <br><input type="radio" value="Hyber Text Markup Language" name="q1" >Hyber Text Markup Language';
+
+     
+
+    /**************timer*****************/
+
+        startTimer();
+
+
+        function startTimer() {
+        var presentTime = document.getElementById('timer').innerHTML;
+        var timeArray = presentTime.split(":");
+        var m = timeArray[0];
+        var s = checkSecond((timeArray[1] - 1));
+        if(s==59){m=m-1}
+        if(m<0){
+            return
+        }
+        
+        document.getElementById('timer').innerHTML = m + ":" + s;
+        
+       
+        
+        }
+
+        function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+        if (sec < 0) {sec = "59"};
+        return sec;
+        }
+        var t=setInterval(startTimer, 1000);
+
+
+    /**********************************/
+     function result()
+     {
+        clearInterval(t);
+         var q1useranswer="";
+         var ansertype=false;
+
+        var resultdiv=document.getElementById('result');
+        resultdiv.innerHTML="";
+        resultdiv.innerHTML+="True answer is "+q1.qanswer;
+
+        var q1options=document.getElementsByName('q1');
+        for(var i=0;i<q1options.length;i++)
+        {
+            if(q1options[i].checked)
+            {
+                q1useranswer=q1options[i].value;
+            
+            }
+
+        }
+        if(q1useranswer==q1.qanswer)
+        {
+            ansertype=true;
+        }
+        resultdiv.innerHTML+="<br>User answer is "+q1useranswer;
+        resultdiv.innerHTML+="<br>"+ansertype;
+
+
+      
+
+     }
+    </script>
+</body>
+</html>

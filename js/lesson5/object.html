@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+          //array
+          var array1=['car1','car2','car3'];  
+          var array2=new Array('BMW','Mercedes','Rover');
+          var array3=[];
+          array3[0]='BMW';
+          document.write(array1+"<br>");  
+
+          document.write(array1[0]+"<br>");  
+
+          for(var n=0;n<array1.length;n++)
+          {
+            document.write(array1[n]+"<br>");  
+          }
+
+          for (var m in array2)
+          {
+            document.write(array2[m]+"<br>");   
+          }
+
+          /************************************************/
+
+          var person1={};
+          person1['firstname']='ahmed';
+          person1.lastname="mohamed";
+          document.write(person1['lastname']+"<br>"); 
+
+
+          var person2={'firstname':'ahmed','lastname':'mohamed','age':30,'weight':90};
+          document.write(person2['firstname']+"<br>");  
+          document.write(person2+"<br>");  
+
+          var person3=new Object();
+          person3.age=30;
+          document.write(person3['age']+"<br>");   
+          document.write("<br><br>"); 
+          for (var z in person2)
+          {
+            document.write(z+"<br>");   
+          }
+
+
+        var person4={firstname:'ahmed',
+                     lastname:'mohamed',
+                     age:30,
+                     weight:90,
+                     fullname:function(){
+                         return this.firstname+" "+this.lastname;
+                     }
+                    
+                    
+                    
+                    
+                    };
+        document.write("<br><br>"); 
+
+        document.write(person4.fullname()+"<br>");               
+    /************************************************/
+    var q1=[1,'what is HTML?','Cascade style sheet','Cascade css sheet','Hyber Text Markup Language','Hyber Text Markup Language'];
+   
+    var question1={id:1,qtitle:'what is HTML?',qopt1:'Cascade style sheet',qopt2:'Cascade css sheet',qopt3:'Hyber Text Markup Language',qanswer:'Hyber Text Markup Language'}
+
+    document.write("<br><br>");           document.write("<br><br>"); 
+   
+    /***********************************************/
+    function question(id,qtitle,qopt1,qopt2,qopt3,qanswer)
+    {
+            this.id=id;
+            this.qtitle=qtitle;
+            this.qopt1=qopt1;
+            this.qopt2=qopt2;
+            this.qopt3=qopt3;
+            this.qanswer=qanswer;
+
+    }    
+     var q1=new question(1,'what is HTML?','Cascade style sheet','Cascade css sheet','Hyber Text Markup Language','Hyber Text Markup Language');        
+     document.write(q1.qanswer+"<br>");            
+        
+    
+    </script>
+
+
+</body>
+</html>
