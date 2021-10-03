@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #p1{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">welcome</p>
+    <p class="c1">welcome</p>
+    <p class="c1">welcome</p>
+    <button  id="but1">hide</button>
+    <button  id="but2">show</button>
+    <button  id="but3">toggle</button>
+
+    <button  id="but4">fadein</button>
+    <button  id="but5">fadeout</button>
+    <button  id="but6">fade to</button>
+    <button  id="but7">fadetoggle</button>
+
+    <button  id="but8">slideup</button>
+    <button  id="but9">slidedown</button>
+    <button  id="but10">slidetoggle</button>
+    <script>
+        //document.getElementById('p1').innerHTML="welcome from js";
+        //document.getElementById('p1').style.color="red";
+
+
+        //document.getElementsByClassName('c1')[0].innerHTML="welcome from js22222";
+    </script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#p1').html('welcome from jq');
+        $('.c1').html('welcome from js22222');
+
+        $('#but1').click(function(){
+            $('#p1').hide();
+        });
+
+        $('#but2').click(function(){
+            $('#p1').show();
+        });
+
+        $('#but3').click(function(){
+            $('#p1').toggle();
+        });
+
+        $('#but4').click(function(){
+            $('#p1').fadeIn(1500);
+        });
+        $('#but5').click(function(){
+            $('#p1').fadeOut(1500);
+        });
+        $('#but6').click(function(){
+            $('#p1').fadeTo(1500,0.5);
+        });
+        $('#but7').click(function(){
+            $('#p1').fadeToggle(3000);
+        });
+
+
+        $('#but8').click(function(){
+            $('#p1').slideUp();
+        });
+        $('#but9').click(function(){
+            $('#p1').slideDown();
+        });
+        $('#but10').click(function(){
+            $('#p1').slideToggle();
+        });
+
+
+
+
+
+
+
+
+        function func1()
+        {
+
+        }
+    </script>
+</body>
+</html>
