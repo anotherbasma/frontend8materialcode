@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+        #p1{
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            left: 0px;
+        }
+
+
+        .bg1{
+            background-color: darkcyan;
+        }
+
+        .bgdiv{
+            position: fixed;
+            top:0px;
+            right: 0px;
+            padding: 20px;
+
+        }
+        .bgdiv button{
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            
+        }
+        .col1
+        {
+            background-color: darkcyan;
+        }
+        .col2
+        {
+            background-color:darkmagenta;
+        }
+        .col3
+        {
+            background-color:darkslateblue;
+        }
+
+    </style>
+</head>
+<body class="">
+    <div class="bgdiv">
+        <button class="col1"> </button>
+        <button class="col2"> </button>
+        <button class="col3"> </button>
+    </div>
+    <p id="p1">welcome</p>
+    <input placeholder="name" id="name">
+    
+    <button id="but1"> click to animate</button>
+    <button id="but2"> click to change css</button>
+    <button id="but3"> stop </button>
+    <button id="but4"> chain </button>
+    <button id="but5"> get </button>
+    <button id="but6"> set </button>
+    <button id="but7"> add css </button>
+    
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        //var windwidth=window.innerWidth-200;
+        $windwidth=$(window).outerWidth()-$('#p1').width();
+        $('#but1').click(function(){
+            $('#p1').animate({'left':$windwidth,'height':'100px'},7000);
+
+        });
+        $('#but2').click(function(){
+            $('#p1').css({'width':'100px','backgroundColor':'red'});
+
+        });
+        $('#but3').click(function(){
+            $('#p1').stop();
+
+        });
+        $('#but4').click(function(){
+           // $('#p1').slideUp(3000).slideDown(3000).css({'width':'100px','backgroundColor':'red'});
+          
+           $('#p1').slideUp(3000).slideDown(3000,function(){
+            $('#p1').css({'width':'100px','backgroundColor':'red'});
+           });
+
+        });
+
+
+        $('#but5').click(function(){
+           
+            alert($('#p1').html());
+            alert( $('#name').val());
+            alert( $('#name').attr('placeholder'));
+        });
+        $('#but6').click(function(){
+           
+          $('#p1').html('welcome from jq');
+          $('#name').val('basma ahmed');
+          $('#name').attr('placeholder','Enter name please');
+       });
+
+       $('#but7').click(function(){
+           
+           $('body').addClass('bg1');
+        
+       });
+
+       $('.col1').click(function(){
+           $('body').removeClass('col1 col2 col3');
+           $('body').addClass('col1');
+        
+       });
+       $('.col2').click(function(){
+        $('body').removeClass('col1 col2 col3');
+           $('body').addClass('col2');
+        
+       });
+       $('.col3').click(function(){
+        $('body').removeClass('col1 col2 col3');
+           $('body').addClass('col3');
+        
+       });
+    </script>
+</body>
+</html>

@@ -11,9 +11,34 @@
     rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/all.min.css">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
     <style>
+      .bgdiv{
+            position: fixed;
+            top:100px;
+            right:50px;
+            z-index: 100000;
+            padding: 20px;
 
+        }
+        .bgdiv button{
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            
+        }
+      .col1
+        {
+            background-color: #F4511E;
+        }
+        .col2
+        {
+            background-color:#50bdb4;;
+        }
+        .col3
+        {
+            background-color:rgb(123, 78, 165);
+        }
     </style>
     <title>Hello, world!</title>
   </head>
@@ -51,6 +76,7 @@
           </div>
         </div>
       </nav>
+  
       <!--header----------------------------------------->
 
       <header class="container-fluid py-5 myheader text-center text-light" id="header">
@@ -68,6 +94,11 @@
             </div>
       </header>
 
+      <div class="bgdiv">
+        <button class="col1"> </button>
+        <button class="col2"> </button>
+        <button class="col3"> </button>
+      </div>
 
 
       <!--about-->
@@ -367,6 +398,21 @@
     new WOW().init();
     </script>
    
-  
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script>
+     $('.col1').click(function(){
+         
+        $("[href*='css/style']").attr('href','css/style1.css');
+       });
+       $('.col2').click(function(){
+        $("[href*='css/style']").attr('href','css/style2.css');
+        
+       });
+       $('.col3').click(function(){
+        $("[href*='css/style']").attr('href','css/style3.css');
+        
+       });
+       
+  </script>
   </body>
 </html>
